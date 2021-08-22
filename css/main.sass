@@ -1,0 +1,61 @@
+@import 'general.sass'
+@import 'typography.sass'
+@import 'colors.sass'
+@import 'footer.sass'
+
+
+.contenedor-12
+    max-width: 110px
+    
+
+.contenedor-footer-galeria
+    width: 100%
+    overflow: hidden
+    .contenedor-footer-galeria-foto
+        float: left
+        width: 25%
+
+/** BEM
+
+    block - footer
+        items - logo, links, social icons
+        modifier - 
+
+    footer
+    footer__logo
+    
+    footer__links
+
+    footer__social
+
+ **/
+
+.logo-footer path
+    fill: #2C7566
+
+.footer-links-contenedor
+    display: flex
+    justify-content: space-between
+    margin-bottom: 88px
+    margin-top: 40px
+
+.footer-logo
+    text-align: center
+    
+
+
+.footer-redes-contenedor
+    max-width: 165px
+    margin: auto
+    display: flex
+    justify-content: space-between
+
+// .footer-red
+//     display: inline-block
+//     width: 20px
+
+.footer-red
+    fill: #2C7566
+    &:hover
+        fill: #fff
+        

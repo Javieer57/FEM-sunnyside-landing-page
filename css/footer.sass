@@ -1,0 +1,32 @@
+
+.footer
+    background-color: var(--ligh-cyan)
+    color: var(--dark-moderate-cyan)
+    padding: 72px 40px
+    .footer-wrap
+        margin: auto
+        max-width: 297px
+        text-align: center    
+    &__logo
+        path
+            fill: var(--dark-saturated-cyan)
+    
+    &__links
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: 40px 0 90px
+
+    &__link
+        @include barlow-font($size: 1.125, $color: inherit)
+        text-transform: capitalize
+        &:hover
+            color: #fff
+
+    &__social
+        display: flex
+        justify-content: space-between
+        margin: auto
+        max-width: 164px
+
+// .footer

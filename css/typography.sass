@@ -1,0 +1,14 @@
+/** typography **/    
+@font-face
+    font-family: Barlow
+    src: url(../fonts/Barlow-SemiBold.ttf)
+
+/** typography mixins **/
+@mixin barlow-font($size: 1, $color: #000)
+    color: $color
+    font-family: Barlow, sans-serif
+    font-size: $size + rem
+    font-weight: 600
+    line-height: 25px
+
+/** elements typography **/
