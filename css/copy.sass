@@ -1,0 +1,35 @@
+.copy
+    display: grid
+    justify-content: center
+    align-content: center
+    padding: 25px        
+
+    @media screen and (max-width: 830px)
+        padding: 65px 25px
+
+    &__description
+        width: 100%
+        max-width: 460px
+
+        @media screen and (max-width: 830px)
+            max-width: 370px
+
+    
+    &__title
+        @include fraunces-black($size: 2.5, $color: var(--very-dark-desaturated-blue))
+        margin-bottom: 30px
+    
+    &__text
+        @include barlow-font($size: 1.125, $color: var(--dark-grayish-blue))
+        margin-bottom: 40px
+    
+    &__link
+        @include fraunces-bold($size: 1, $color: var(--very-dark-desaturated-blue))
+        position: relative
+        text-transform: uppercase
+
+        &--yellow
+            @include link-decoration($color: --yellow)
+            
+        &--red
+            @include link-decoration($color: --soft-red)

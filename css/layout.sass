@@ -1,5 +1,15 @@
 .container
     max-width: 1110px
     margin: auto
-    // padding-left: 25px
-    // padding-right: 25px
+
+.squares
+    display: flex
+    flex-wrap: wrap 
+
+.square
+    width: 50%
+    position: relative
+
+    @media screen and (max-width: 830px)
+        min-width: 100%
+        width: 100%

@@ -18,6 +18,22 @@ a {
   margin: auto;
 }
 
+.squares {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 50%;
+  position: relative;
+}
+@media screen and (max-width: 830px) {
+  .square {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
 /** typography **/    
 @font-face {
   font-family: Barlow;
@@ -40,26 +56,87 @@ a {
   --white: hsl(0, 0%, 100%);
   --dark-blue: hsl(197, 86%, 12%);
   --light-dark-blue: hsl(198, 62%, 26%);
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
   --grayish-blue: hsl(210, 4%, 67%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
   --very-dark-desaturated-blue: hsl(212, 27%, 19%);
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
 }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
+.copy {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 25px;
 }
-
-.service {
-  width: 50%;
-  position: relative;
-}
-@media screen and (max-width: 800px) {
-  .service {
-    min-width: 100%;
-    width: 100%;
+@media screen and (max-width: 830px) {
+  .copy {
+    padding: 65px 25px;
   }
 }
+.copy__description {
+  width: 100%;
+  max-width: 460px;
+}
+@media screen and (max-width: 830px) {
+  .copy__description {
+    max-width: 370px;
+  }
+}
+.copy__title {
+  color: var(--very-dark-desaturated-blue);
+  font-family: Fraunces-black, serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.copy__text {
+  color: var(--dark-grayish-blue);
+  font-family: Barlow, sans-serif;
+  font-size: 1.125rem;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+.copy__link {
+  color: var(--very-dark-desaturated-blue);
+  font-family: Fraunces-bold, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+}
+.copy__link--yellow::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  padding: 5px 8px;
+  bottom: -2px;
+  z-index: -1;
+  left: -8px;
+  border-radius: 25px;
+  opacity: 0.25;
+  background-color: var(--yellow);
+}
+.copy__link--yellow:hover::after {
+  opacity: 1;
+}
+.copy__link--red::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  padding: 5px 8px;
+  bottom: -2px;
+  z-index: -1;
+  left: -8px;
+  border-radius: 25px;
+  opacity: 0.25;
+  background-color: var(--soft-red);
+}
+.copy__link--red:hover::after {
+  opacity: 1;
+}
+
 .service__description {
   position: absolute;
   left: 50%;
@@ -69,7 +146,7 @@ a {
   max-width: 370px;
   text-align: center;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   .service__description {
     bottom: 15%;
   }
