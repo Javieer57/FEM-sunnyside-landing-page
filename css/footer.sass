@@ -1,7 +1,5 @@
-
 .footer
     background-color: var(--ligh-cyan)
-    color: var(--dark-moderate-cyan)
     padding: 72px 40px
     .footer-wrap
         margin: auto
@@ -18,7 +16,7 @@
         margin: 40px 0 90px
 
     &__link
-        @include barlow-font($size: 1.125, $color: inherit)
+        @include barlow-font($size: 1.125, $color: var(--dark-saturated-cyan))
         text-transform: capitalize
         &:hover
             color: #fff
@@ -28,5 +26,10 @@
         justify-content: space-between
         margin: auto
         max-width: 164px
+
+    &__icon
+        fill: var(--dark-saturated-cyan)
+        &:hover
+            fill: var(--white)
 
 // .footer
