@@ -19,16 +19,38 @@ a {
 }
 
 .squares {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 830px) {
+  .squares {
+    grid-template-columns: 1fr;
+  }
+  .squares .square:nth-child(1) {
+    order: 2;
+  }
+  .squares .square:nth-child(2) {
+    order: 1;
+  }
+  .squares .square:nth-child(3) {
+    order: 3;
+  }
+  .squares .square:nth-child(4) {
+    order: 4;
+  }
+}
+
+.services {
   display: flex;
   flex-wrap: wrap;
 }
 
-.square {
+.service {
   width: 50%;
   position: relative;
 }
 @media screen and (max-width: 830px) {
-  .square {
+  .service {
     min-width: 100%;
     width: 100%;
   }
