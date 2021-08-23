@@ -38,9 +38,61 @@ a {
   --dark-moderate-cyan: hsl(168, 34%, 41%);
   --dark-saturated-cyan: hsl(168, 46%, 31%);
   --white: hsl(0, 0%, 100%);
+  --dark-blue: hsl(197, 86%, 12%);
+  --light-dark-blue: hsl(198, 62%, 26%);
   --grayish-blue: hsl(210, 4%, 67%);
   --very-dark-desaturated-blue: hsl(212, 27%, 19%);
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 50%;
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .service {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+.service__description {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8%;
+  width: 100%;
+  max-width: 370px;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .service__description {
+    bottom: 15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .service__description {
+    bottom: 10%;
+    padding: 0 25px;
+    width: 100%;
+  }
+}
+.service__title {
+  color: var(--dark-blue);
+  font-family: Fraunces-black, serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 5%;
+}
+.service__text {
+  color: var(--light-dark-blue);
+  font-family: Barlow, sans-serif;
+  font-size: 1rem;
+  line-height: 25px;
 }
 
 .testimonials {

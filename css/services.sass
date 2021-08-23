@@ -1,0 +1,35 @@
+.services
+    display: flex
+    flex-wrap: wrap 
+
+.service
+    width: 50%
+    position: relative
+
+    @media screen and (max-width: 800px)
+        min-width: 100%
+        width: 100%
+
+    &__description
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 8%
+        width: 100%
+        max-width: 370px
+        text-align: center
+
+        @media screen and (max-width: 800px)
+            bottom: 15%
+
+        @media screen and (max-width: 500px)
+            bottom: 10%
+            padding: 0 25px
+            width: 100%
+    
+    &__title
+        @include fraunces-black($size: 1.75, $color: var(--dark-blue))
+        margin-bottom: 5%
+
+    &__text
+        @include barlow-font($size: 1, $color: var(--light-dark-blue))
