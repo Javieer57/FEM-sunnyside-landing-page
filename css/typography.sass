@@ -1,14 +1,33 @@
 /** typography **/    
 @font-face
     font-family: Barlow
-    src: url(../fonts/Barlow-SemiBold.ttf)
+    src: url(../fonts/Barlow/Barlow-SemiBold.ttf)
+
+@font-face
+    font-family: Fraunces-black
+    src: url(../fonts/Fraunces/Fraunces-Black.ttf)
+
+@font-face
+    font-family: Fraunces-bold
+    src: url(../fonts/Fraunces/Fraunces-Bold.ttf)
 
 /** typography mixins **/
-@mixin barlow-font($size: 1, $color: #000)
+@mixin barlow-font($size: 1, $color: var(--very-dark-grayish-blue))
     color: $color
     font-family: Barlow, sans-serif
     font-size: $size + rem
-    font-weight: 600
     line-height: 25px
+
+@mixin fraunces-black($size: 1, $color: var(--very-dark-grayish-blue))
+    color: $color
+    font-family: Fraunces-black, serif
+    font-size: $size + rem
+    font-weight: 900
+
+@mixin fraunces-bold($size: 1, $color: var(--very-dark-grayish-blue))
+    color: $color
+    font-family: Fraunces-bold, serif
+    font-size: $size + rem
+    font-weight: 700
 
 /** elements typography **/

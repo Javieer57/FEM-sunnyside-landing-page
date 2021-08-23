@@ -13,10 +13,23 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1110px;
+  margin: auto;
+}
+
 /** typography **/    
 @font-face {
   font-family: Barlow;
-  src: url(../fonts/Barlow-SemiBold.ttf);
+  src: url(../fonts/Barlow/Barlow-SemiBold.ttf);
+}
+@font-face {
+  font-family: Fraunces-black;
+  src: url(../fonts/Fraunces/Fraunces-Black.ttf);
+}
+@font-face {
+  font-family: Fraunces-bold;
+  src: url(../fonts/Fraunces/Fraunces-Bold.ttf);
 }
 /** typography mixins **/
 /** elements typography **/
@@ -25,6 +38,70 @@ a {
   --dark-moderate-cyan: hsl(168, 34%, 41%);
   --dark-saturated-cyan: hsl(168, 46%, 31%);
   --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+}
+
+.testimonials {
+  margin-top: 160px;
+  margin-bottom: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+}
+.testimonials__title {
+  color: var(--grayish-blue);
+  font-family: Fraunces-black, serif;
+  font-size: 1.125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 700px) {
+  .testimonials {
+    padding: 0 25px;
+  }
+}
+.testimonial {
+  max-width: 350px;
+  text-align: center;
+}
+.testimonial:not(:last-child) {
+  margin-bottom: 65px;
+}
+.testimonial__img {
+  max-width: 70px;
+  border-radius: 50%;
+  margin-bottom: 60px;
+}
+.testimonial__text {
+  color: var(--very-dark-grayish-blue);
+  font-family: Barlow, sans-serif;
+  font-size: 1.125rem;
+  line-height: 25px;
+  margin-bottom: 70px;
+  font-weight: normal;
+  letter-spacing: -0.13px;
+}
+.testimonial__name {
+  color: var(--very-dark-desaturated-blue);
+  font-family: Fraunces-black, serif;
+  font-size: 1.125rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.testimonial__occupation {
+  color: var(--grayish-blue);
+  font-family: Barlow, sans-serif;
+  font-size: 0.875rem;
+  line-height: 25px;
+  font-weight: normal;
 }
 
 .gallery {
@@ -59,9 +136,9 @@ a {
   color: var(--dark-saturated-cyan);
   font-family: Barlow, sans-serif;
   font-size: 1.125rem;
-  font-weight: 600;
   line-height: 25px;
   text-transform: capitalize;
+  font-weight: normal;
 }
 .footer__link:hover {
   color: #fff;
