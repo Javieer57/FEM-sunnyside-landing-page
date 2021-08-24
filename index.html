@@ -11,34 +11,56 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<title>Frontend Mentor | Sunnyside agency landing page</title>
-
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<style>
-		.attribution {
-			font-size: 11px;
-			text-align: center;
-		}
-
-		.attribution a {
-			color: hsl(228, 45%, 44%);
-		}
-	</style>
 </head>
 
 <body>
-	<!-- About
-	Services
-	Projects
-	Contact
 
-	We are creatives
+	<!-- <header class="hero">
+		<div class="hero-top">
+			<div class="logo">
+				<img src="./images/logo.svg" alt="" />
+			</div>
 
+			<nav class="navtop" id="topnav">
+				<div class="navtop__links">
+					<a class="navtop__link" href="#">About</a>
+					<a class="navtop__link" href="#">Services</a>
+					<a class="navtop__link" href="#">Projects</a>
+					<a class="navtop__link navtop-active" href="#">Contact</a>
+				</div>
 
+				<i class="navtop-icon fas fa-bars" id="toggle-menu"></i>
+			</nav>
+		</div>
 
-	<div class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-		Coded by <a href="#">Your Name Here</a>.
-	</div> -->
+		<div class="hero-content">
+			<h1 class="hero__title">We are creatives</h1>
+			<img src="./images/icon-arrow-down.svg" alt="" />
+		</div>
+	</header> -->
+
+	<header class="navbar">
+		<div class="navbar__logo">
+			<img src="images/logo.svg" alt="Sunnyside">
+		</div>
+
+		<div class="navbar__icon" id="navbar__icon">
+			<svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+				<path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
+			</svg>
+		</div>
+
+		<nav class="navbar__menu" id="navbar__menu">
+			<div class="wrapper">
+				<a href="#" class="navbar__link">About</a>
+				<a href="#" class="navbar__link">Services</a>
+				<a href="#" class="navbar__link">Projects</a>
+				<a href="#" class="navbar__link navbar__link--active">Contact</a>
+			</div>
+		</nav>
+		<!-- <nav class="navbar__menu">
+		</nav> -->
+	</header>
 
 	<div class="squares">
 		<section class="copy square">
@@ -74,7 +96,6 @@
 		</section>
 	</div>
 
-
 	<div class="services">
 		<section class="service">
 			<picture>
@@ -102,8 +123,6 @@
 			</div>
 		</section>
 	</div>
-
-
 
 	<section class="testimonials container">
 		<h2 class="testimonials__title">Client testimonials</h2>
@@ -162,7 +181,6 @@
 
 	<footer class="footer">
 		<div class="container">
-			<!-- checar si puede omitirse el wrap y solo centrar los elementos horizontalmente -->
 			<div class="footer-wrap">
 				<svg class="footer__logo" width="124" height="24" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -206,10 +224,24 @@
 						</svg>
 					</a>
 				</div>
+
+			</div>
+			<div class="attribution">
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+					Mentor</a>.
+				Coded by <a href="https://github.com/Javieer57">Javieer E</a>.
 			</div>
 		</div>
 	</footer>
 
+	<script>
+		let icon = document.getElementById('navbar__icon'),
+			menu = document.getElementById('navbar__menu');
+
+		icon.addEventListener('click', function () {
+			menu.classList.toggle('navbar__menu--active');
+		});
+	</script>
 </body>
 
 </html>

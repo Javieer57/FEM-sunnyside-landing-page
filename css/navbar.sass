@@ -1,0 +1,77 @@
+.navbar
+    position: relative
+    background-color: black
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 35px 45px
+
+    &__logo
+        width: 100%
+        max-width: 170px
+
+    &__icon
+        display: none
+        padding: 8px
+
+    &__link 
+        @include barlow-font($size: 1.125, $color: var(--white))
+        display: inline-block
+        padding: 15px 30px
+        border-radius: 30px
+        text-align: center
+
+
+        &--active
+            @include fraunces-bold($size: 1, $color: var(--very-dark-desaturated-blue))
+            background-color: hsla(0, 0%, 100%, 1)
+            text-transform: uppercase
+            &:hover
+                color: var(--white)
+                background-color: hsla(0, 0%, 100%, .25)
+
+
+@media screen and (max-width: 830px)
+    .navbar
+        &__icon
+            display: inline-block
+            padding: 8px 0 8px 8px
+            cursor: pointer 
+
+        &__menu
+            padding: 25px 45px            
+            position: absolute
+            display: flex
+            flex-direction: column
+            width: 100%
+            left: 0
+            top: 90px
+            display: none
+            
+            &--active
+                display: block
+
+            .wrapper
+                padding: 40px 0            
+                display: flex
+                align-items: center
+                flex-direction: column
+                background-color: var(--white)
+                position: relative
+                &::after
+                    position: absolute
+                    top: -24px
+                    right: 0
+                    content: ""
+                    border-right: 24px solid var(--white)
+                    border-top: 24px solid transparent
+
+        &__link
+            color: var(--dark-grayish-blue)
+
+            &--active
+                color: var(--very-dark-desaturated-blue)
+                background-color: hsla(51, 100%, 49%, 1)
+                &:hover
+                    color: var(--very-dark-desaturated-blue)
+                    background-color: hsla(51, 100%, 49%, .25)

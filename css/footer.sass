@@ -16,6 +16,9 @@
         justify-content: space-between
         margin: 40px 0 90px
 
+        @media screen and (max-width: 320px) 
+            flex-direction: column
+
     &__link
         @include barlow-font($size: 1.125, $color: var(--dark-saturated-cyan))
         text-transform: capitalize
@@ -23,13 +26,24 @@
         &:hover
             color: #fff
 
+        @media screen and (max-width: 320px)
+            &:not(:last-child)                
+                margin-bottom: 20px
+
     &__social
         display: flex
         justify-content: space-between
         margin: auto
+        margin-bottom: 40px
         max-width: 164px
 
     &__icon
         fill: var(--dark-saturated-cyan)
         &:hover
             fill: var(--white)
+
+.attribution
+    @include barlow-font($size: 1, $color: var(--dark-saturated-cyan))
+    text-align: center
+    a
+        color: hsl(228, 45%, 44%)
