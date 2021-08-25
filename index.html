@@ -6,44 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- displays site properly based on user's device -->
 
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="assets/css/main.css">
 
 	<title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
 
 <body>
-
-	<!-- <header class="hero">
-		<div class="hero-top">
-			<div class="logo">
-				<img src="./images/logo.svg" alt="" />
-			</div>
-
-			<nav class="navtop" id="topnav">
-				<div class="navtop__links">
-					<a class="navtop__link" href="#">About</a>
-					<a class="navtop__link" href="#">Services</a>
-					<a class="navtop__link" href="#">Projects</a>
-					<a class="navtop__link navtop-active" href="#">Contact</a>
-				</div>
-
-				<i class="navtop-icon fas fa-bars" id="toggle-menu"></i>
-			</nav>
-		</div>
-
-		<div class="hero-content">
-			<h1 class="hero__title">We are creatives</h1>
-			<img src="./images/icon-arrow-down.svg" alt="" />
-		</div>
-	</header> -->
-
-
 	<div class="hero">
 		<header class="navbar">
 			<div class="navbar__logo">
-				<img src="images/logo.svg" alt="Sunnyside">
+				<img src="assets/images/logo.svg" alt="Sunnyside">
 			</div>
 
 			<div class="navbar__icon" id="navbar__icon">
@@ -71,7 +45,6 @@
 				</g>
 			</svg>
 		</div>
-		<!-- <img src="images/desktop/image-header.jpg" alt=""> -->
 	</div>
 
 	<div class="squares">
@@ -83,18 +56,21 @@
 				<a class="copy__link copy__link--yellow" href="#">Learn more</a>
 			</div>
 		</section>
-		<section class="square">
+
+		<div class="square">
 			<picture>
-				<source media="(max-width: 500px)" srcset="images/mobile/image-transform.jpg">
-				<img src="images/desktop/image-transform.jpg" alt="">
+				<source media="(max-width: 500px)" srcset="assets/images/mobile/image-transform.jpg">
+				<img src="assets/images/desktop/image-transform.jpg" alt="">
 			</picture>
-		</section>
-		<section class="square">
+		</div>
+
+		<div class="square">
 			<picture>
-				<source media="(max-width: 500px)" srcset="images/mobile/image-stand-out.jpg">
-				<img src="images/desktop/image-stand-out.jpg" alt="">
+				<source media="(max-width: 500px)" srcset="assets/images/mobile/image-stand-out.jpg">
+				<img src="assets/images/desktop/image-stand-out.jpg" alt="">
 			</picture>
-		</section>
+		</div>
+
 		<section class="copy square">
 			<div class="copy__description">
 				<h2 class="copy__title">Stand out to the right audience</h2>
@@ -108,11 +84,11 @@
 		</section>
 	</div>
 
-	<div class="services">
-		<section class="service">
+	<section class="services">
+		<div class="service">
 			<picture>
-				<source media="(max-width: 500px)" srcset="images/mobile/image-graphic-design.jpg">
-				<img src="images/desktop/image-graphic-design.jpg" alt="cherry">
+				<source media="(max-width: 500px)" srcset="assets/images/mobile/image-graphic-design.jpg">
+				<img src="assets/images/desktop/image-graphic-design.jpg" alt="cherry">
 			</picture>
 			<div class="service__description">
 				<h3 class="service__title">Graphic design</h3>
@@ -120,12 +96,12 @@
 					brand
 					message and captures potential clients’ attention.</p>
 			</div>
-		</section>
+		</div>
 
-		<section class="service">
+		<div class="service">
 			<picture>
-				<source media="(max-width: 500px)" srcset="images/mobile/image-photography.jpg">
-				<img src="images/desktop/image-photography.jpg" alt="tangerine">
+				<source media="(max-width: 500px)" srcset="assets/images/mobile/image-photography.jpg">
+				<img src="assets/images/desktop/image-photography.jpg" alt="tangerine">
 			</picture>
 			<div class="service__description">
 				<h3 class="service__title">Photography</h3>
@@ -133,13 +109,14 @@
 					that
 					improve your business image.</p>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 
 	<section class="testimonials container">
 		<h2 class="testimonials__title">Client testimonials</h2>
+
 		<div class="testimonial">
-			<img src="images/image-emily.jpg" alt="emily photo" class="testimonial__img">
+			<img src="assets/images/image-emily.jpg" alt="emily photo" class="testimonial__img">
 			<div class="testimonial__text">
 				We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were
 				always hit.
@@ -149,7 +126,7 @@
 		</div>
 
 		<div class="testimonial">
-			<img src="images/image-thomas.jpg" alt="thomas photo" class="testimonial__img">
+			<img src="assets/images/image-thomas.jpg" alt="thomas photo" class="testimonial__img">
 			<div class="testimonial__text">
 				Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
 				enjoyable
@@ -160,7 +137,7 @@
 		</div>
 
 		<div class="testimonial">
-			<img src="images/image-jennie.jpg" alt="jennie photo" class="testimonial__img">
+			<img src="assets/images/image-jennie.jpg" alt="jennie photo" class="testimonial__img">
 			<div class="testimonial__text">
 				Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
 			</div>
@@ -171,23 +148,24 @@
 
 	<section class="gallery">
 		<picture>
-			<source media="(max-width: 600px)" srcset="images/mobile/image-gallery-milkbottles.jpg">
-			<img class="gallery__img--mobil" src="images/desktop/image-gallery-milkbottles.jpg" alt="milk bottles">
+			<source media="(max-width: 600px)" srcset="assets/images/mobile/image-gallery-milkbottles.jpg">
+			<img class="gallery__img--mobil" src="assets/images/desktop/image-gallery-milkbottles.jpg"
+				alt="milk bottles">
 		</picture>
 
 		<picture>
-			<source media="(max-width: 600px)" srcset="images/mobile/image-gallery-orange.jpg">
-			<img class="gallery__img" src="images/desktop/image-gallery-orange.jpg" alt="orange">
+			<source media="(max-width: 600px)" srcset="assets/images/mobile/image-gallery-orange.jpg">
+			<img class="gallery__img" src="assets/images/desktop/image-gallery-orange.jpg" alt="orange">
 		</picture>
 
 		<picture>
-			<source media="(max-width: 600px)" srcset="images/mobile/image-gallery-cone.jpg">
-			<img class="gallery__img" src="images/desktop/image-gallery-cone.jpg" alt="cone">
+			<source media="(max-width: 600px)" srcset="assets/images/mobile/image-gallery-cone.jpg">
+			<img class="gallery__img" src="assets/images/desktop/image-gallery-cone.jpg" alt="cone">
 		</picture>
 
 		<picture>
-			<source media="(max-width: 600px)" srcset="images/mobile/image-gallery-sugar-cubes.jpg">
-			<img class="gallery__img" src="images/desktop/image-gallery-sugarcubes.jpg" alt="sugar cubes">
+			<source media="(max-width: 600px)" srcset="assets/images/mobile/image-gallery-sugar-cubes.jpg">
+			<img class="gallery__img" src="assets/images/desktop/image-gallery-sugarcubes.jpg" alt="sugar cubes">
 		</picture>
 	</section>
 
