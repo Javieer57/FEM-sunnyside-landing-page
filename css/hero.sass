@@ -1,111 +1,24 @@
 .hero
-    background-color: lightblue
-    background-image: url('../images/desktop/image-header.jpg')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
     height: 100vh
+    background-image: url(../images/desktop/image-header.jpg)
+    background-position: bottom
+    background-size: cover
+    background-repeat: no-repeat
 
-.hero-top
-    display: flex
-    justify-content: space-between
-    padding: 30px 60px
-    align-items: center
-
-.logo
-    display: flex
-    min-width: 180px
-    img
-        align-self: center
-        width: 100%
-
-.navtop-icon
-    color: white
-    cursor: pointer
-    display: none
-    font-size: 24px
-    padding: 10px 0 10px 10px
-
-.navtop__link
-    @include barlow-font($size: 1.125, $color: var(--white))
-    display: inline-block
-    padding: 15px 30px
-    border-radius: 25px
-
-    &:active
-        background-color: rgba(255, 255, 255, .3)
-        color: white
-
-.navtop-active
-    background-color: white
-    text-transform: uppercase
-
-.hero-content
-    text-align: center
-    padding-top: 70px
-
-.hero__title
-    @include fraunces-black($size: 3.5, $color: var(--white))
-    text-transform: uppercase
-    letter-spacing: 10px
-    margin: 0 0 70px
-
-@media screen and ( max-width: 900px )
-    .hero-top
-        padding: 30px 6vw
-    .navtop__links
-        display: none
-
-    .navtop
-        width: 100%
-        text-align: right
-        &.responsive
-            position: relative
-
-            .navtop__links
-                background-color: #fff
-                display: flex
-                flex-wrap: nowrap
-                flex-direction: column
-                left: -180px
-                position: absolute
-                right: 0
-                text-align: center
-                top: 70px
-                width: 100
-                padding: 30px 0
-                align-items: center
-
-                &::after
-                    content: ''
-                    width: 0
-                    height: 0
-                    border-top: 40px solid transparent
-                    border-right: 40px solid white
-                    position: absolute
-                    right: 0
-                    top: -25px
-
-                .navtop__link
-                    @include barlow-font($color: hsl(232, 10%, 55%), $size: 20px)
-                    display: inline-block
-                    margin: 5px
-
-                .navtop-active
-                    background-color: hsl(51, 100%, 49%)
-                    text-transform: uppercase
-                    
-    .navtop-icon
-        display: inline-block
-
-@media screen and ( max-width: 700px )
-    .hero
-        background-color: lightblue
-        background-image: url('../images/mobile/image-header.jpg')
-        // background-position: bottom center
-
+    @media screen and (max-width: 830px)
+        background-image: url(../images/mobile/image-header.jpg)
     
-@media screen and ( max-width: 500px )
-    .hero__title
-        font-size: 10vw
-        padding: 0 10px
+    &__wrapper
+        padding: 50px 25px
+        text-align: center
+    
+    &__text
+        @include fraunces-black($size: 3.5, $color: var(--white))
+        text-transform: uppercase
+        letter-spacing: 10px
+        padding-bottom: 60px
+
+        @media screen and (max-width: 500px)
+            font-size: 11vw
+            @media screen and (max-width: 400px)
+                font-size: 9vw

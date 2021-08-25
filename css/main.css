@@ -70,7 +70,6 @@ a {
   src: url(../fonts/Fraunces/Fraunces-Bold.ttf);
 }
 /** typography mixins **/
-/** elements typography **/
 :root {
   --ligh-cyan: hsl(168, 44%, 70%);
   --dark-moderate-cyan: hsl(168, 34%, 41%);
@@ -86,10 +85,46 @@ a {
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
 }
 
+.hero {
+  height: 100vh;
+  background-image: url(../images/desktop/image-header.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 830px) {
+  .hero {
+    background-image: url(../images/mobile/image-header.jpg);
+  }
+}
+.hero__wrapper {
+  padding: 50px 25px;
+  text-align: center;
+}
+.hero__text {
+  color: var(--white);
+  font-family: Fraunces-black, serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 500px) {
+  .hero__text {
+    font-size: 11vw;
+  }
+}
+@media screen and (max-width: 500px) and (max-width: 400px) {
+  .hero__text {
+    font-size: 9vw;
+  }
+}
+
 .navbar {
   position: relative;
-  background-color: black;
   display: flex;
+  background-color: #3ebfff;
   justify-content: space-between;
   align-items: center;
   padding: 35px 45px;
@@ -126,6 +161,9 @@ a {
 }
 
 @media screen and (max-width: 830px) {
+  .navbar {
+    padding: 35px 25px;
+  }
   .navbar__icon {
     display: inline-block;
     padding: 8px 0 8px 8px;
