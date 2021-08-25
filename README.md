@@ -57,6 +57,7 @@ Further, I'll focus more on writing reusable CSS to improve this part.
 ## Author
 
 -   Frontend Mentor - [@Javieer57](https://www.frontendmentor.io/profile/Javieer57)
+-   Github - [@Javieer57](https://github.com/Javieer57)
 -   Instagram - [@javieer57](https://www.instagram.com/javieer_57/)
 
 ## Acknowledgments
