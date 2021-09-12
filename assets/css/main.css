@@ -86,7 +86,7 @@ a {
 }
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../images/desktop/image-header.jpg);
   background-position: bottom;
   background-size: cover;
@@ -134,6 +134,8 @@ a {
   max-width: 170px;
 }
 .navbar__icon {
+  background-color: transparent;
+  border: none;
   display: none;
   padding: 8px;
 }
